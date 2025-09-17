@@ -5,76 +5,56 @@ import Link from "next/link"
 export function HeroSection() {
   return (
     <section className="relative mx-auto pb-12 overflow-hidden min-h-screen">
-      <div className="absolute hidden md:block left-20 top-35 w-72 h-96 z-1 opacity-60 rounded-lg">
-        <div className="relative w-full h-full -rotate-12 transform origin-center rounded-lg">
-          <img src="/gray-theme.png" alt="" className="w-full h-full object-cover object-top border border-gray-200 rounded-lg" />
-          {/* Dissolving gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white rounded-lg"></div>
-          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent rounded-lg"></div>
-        </div>
-      </div>
 
-      <div className="absolute hidden md:block right-20 top-35 w-72 h-96 z-1 opacity-60 rounded-lg">
-        <div className="relative w-full h-full rotate-12 transform origin-center rounded-lg">
-          <img src="/minimal-theme.png" alt="" className="w-full h-full object-cover object-top border border-gray-200 rounded-lg" />
-          {/* Dissolving gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white rounded-lg"></div>
-          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent rounded-lg"></div>
-        </div>
-      </div>
-
-      {/* Circuit Board - Light Pattern */}
+      {/* Paper Texture */}
       <div
-        className="absolute inset-0 z-0 pointer-events-none"
+        className="absolute inset-0 z-0"
         style={{
           backgroundImage: `
-            repeating-linear-gradient(0deg, transparent, transparent 19px, rgba(75, 85, 99, 0.08) 19px, rgba(75, 85, 99, 0.08) 20px, transparent 20px, transparent 39px, rgba(75, 85, 99, 0.08) 39px, rgba(75, 85, 99, 0.08) 40px),
-            repeating-linear-gradient(90deg, transparent, transparent 19px, rgba(75, 85, 99, 0.08) 19px, rgba(75, 85, 99, 0.08) 20px, transparent 20px, transparent 39px, rgba(75, 85, 99, 0.08) 39px, rgba(75, 85, 99, 0.08) 40px),
-            radial-gradient(circle at 20px 20px, rgba(55, 65, 81, 0.12) 2px, transparent 2px),
-            radial-gradient(circle at 40px 40px, rgba(55, 65, 81, 0.12) 2px, transparent 2px)
-          `,
-          backgroundSize: "40px 40px, 40px 40px, 40px 40px, 40px 40px",
+        radial-gradient(circle at 1px 1px, rgba(0,0,0,0.08) 1px, transparent 0),
+        repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.02) 2px, rgba(0,0,0,0.02) 4px),
+        repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(0,0,0,0.02) 2px, rgba(0,0,0,0.02) 4px)
+      `,
+          backgroundSize: "8px 8px, 32px 32px, 32px 32px",
         }}
       />
+
 
       <div className="px-4 py-12 pt-32 max-w-6xl mx-auto text-center">
         <div className="relative z-10 space-y-6">
           <div className="space-y-6">
             <div className="inline-flex items-center px-3 py-1 rounded-full bg-gray-100 border border-gray-200 text-xs font-medium text-gray-700 mb-4">
               <Sparkles className="w-3 h-3 mr-1" />
-              DodoStarter.com
+              Ship faster with DodoStarter
             </div>
             <h1 className="text-4xl sm:text-7xl font-bold text-gray-800 leading-[1.1]">
-              Resume PDF to
+              Launch Your Next Project
               <br />
               <span className="relative inline-block">
                 <span className="relative z-10 font-[family-name:var(--font-instrument-serif)] tracking-normal leading-[1.05]">
-                  Stunning Portfolio Website
+                  This Afternoon
                 </span>
               </span>
-              <br />
-              in 20 seconds, get the offer only at 900$
             </h1>
 
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-tight">
-              Create a professional resume website that stands out. No coding, no design skills needed. Just upload your
-              PDF and watch the magic happen.
+              A brutally simple Next.js boilerplate with auth and a clean one-time payment setup. Go from a blank folder to a working app in the time it takes to brew your coffee...
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full">
-            <Link href="/preview">
+            <Link href="/lifetime">
               <Button
                 className="text-md py-6 group relative overflow-hidden w-full sm:w-auto "
               >
-                Get $2.99 Launch Price now
+                Get DodoStarter - $25
               </Button>
             </Link>
-            <Link href="https://unrealshot.com">
+            <Link href="/blocks">
               <Button
                 variant="secondary"
                 className="text-md py-6 group relative overflow-hidden w-full sm:w-auto"
               >
-                Become the early adpoter of beta features
+                View Live Demo
               </Button>
             </Link>
           </div>
@@ -118,30 +98,11 @@ export function HeroSection() {
                 ))}
               </div>
             </div>
-            <p className="text-gray-600 font-medium">Trusted by professionals</p>
+            <p className="text-gray-600 font-medium">Trusted by 11+ developers</p>
           </div>
-          
-          {/* Peerlist Badge */}
-          <div className="flex justify-center mt-8">
-            <a 
-              href="https://peerlist.io/harvansh/project/cvfoliome" 
-              target="_blank" 
-              rel="noreferrer"
-              className="transition-transform hover:scale-105"
-            > 
-              <img 
-                src="https://peerlist.io/api/v1/projects/embed/PRJHJKNQBNGE7RO8GCRRPAK69ODGR8?showUpvote=true&theme=light" 
-                alt="DodoStarter.com" 
-                className="w-auto h-8 sm:h-10 md:h-12 lg:h-14" 
-              /> 
-            </a>
-            <a href="https://www.producthunt.com/products/cvfolio-me?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-cvfolio&#0045;me" target="_blank"
-            >
-              <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1009472&theme=neutral&t=1756188473401" 
-              alt="CVFolio&#0046;Me - Resume&#0032;pdf&#0032;to&#0032;stunning&#0032;portfolio&#0032;website&#0032;in&#0032;60&#0032;seconds | Product Hunt" 
-              className="w-auto h-8 sm:h-10 md:h-12 lg:h-14 ml-4"  /></a>
-          </div>
-          
+
+
+
         </div>
       </div>
     </section>

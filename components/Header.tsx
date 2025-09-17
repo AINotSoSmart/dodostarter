@@ -7,7 +7,7 @@ import type React from "react"
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { FolioLogo } from "@/components/icons/FolioLogo"
+import { SiteLogo } from "@/components/icons/SIteLogo"
 
 interface NavbarProps {
   children: React.ReactNode
@@ -159,7 +159,7 @@ function Header() {
         {/* Logo */}
         <div className="flex items-center">
           <a href="/" className="flex items-center gap-2 cursor-pointer">
-            <FolioLogo className="w-32 h-8" />
+            <SiteLogo className="w-32 h-8" />
           </a>
         </div>
 
@@ -172,7 +172,7 @@ function Header() {
             <Button
               className="text-md py-6 group relative overflow-hidden cursor-pointer"
             >
-              Build My Portfolio
+              Ship Now
             </Button>
           </Link>
         </div>
@@ -182,7 +182,7 @@ function Header() {
         <MobileNavHeader>
           <div className="flex items-center">
             <a href="/" className="flex items-center gap-2">
-              <FolioLogo className="w-24 h-7" />
+              <SiteLogo className="w-24 h-7" />
             </a>
           </div>
           <MobileNavToggle isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />

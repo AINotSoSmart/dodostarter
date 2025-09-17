@@ -1,109 +1,123 @@
 "use client"
 
-import { Hammer } from "lucide-react"
+import { Hammer, RocketIcon } from "lucide-react"
 import { Button } from "../ui/button"
 import Link from "next/link"
+import { Badge } from "../ui/badge"
 
 export function HowItWorks() {
   return (
     <section id="how-it-works" className="px-4 py-20 bg-gray-50">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <p className="text-gray-500 italic text-lg mb-4">Our Process, Explained</p>
-          <h2 className="text-4xl lg:text-5xl font-bold text-black">
-            Here's how CVFolio works
+          <Badge variant="outline" className="bg-primary/10 border-primary/20 mb-4">
+            <RocketIcon className="w-3 h-3 mr-1" />
+            The Solution
+          </Badge>
+
+
+
+          <h2 className="text-4xl lg:text-5xl font-bold text-black mb-4">
+            The 5-Minute Promise
           </h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Here's The Workflow. <span className="text-black font-medium">All Of It.</span> This isn't an exaggeration. This is the <em>entire</em> setup process.
+          </p>
         </div>
 
         <div className="relative">
           <div className="grid lg:grid-cols-3 gap-8 lg:gap-12 relative">
             {/* Step 1 */}
-            <div className="bg-white lg:mt-8 rounded-2xl p-8 shadow-sm border-4 border-gray-200 backdrop-blur transform -rotate-2 sm:-rotate-3 relative z-10 hover:rotate-0 transition-transform duration-300">
-              <div className="mb-6">
-                <span className="text-6xl font-bold text-black">1</span>
+            <div className="bg-white lg:mt-8 rounded-2xl p-8 shadow-sm border-5 border-gray-200 backdrop-blur transform relative z-10">
+              <div className="flex items-start gap-4 mb-6">
+                <div className="mb-6">
+                  <span className="text-6xl font-bold text-black">1</span>
+                </div>
+                <div className="hidden sm:flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border-primary/20 ml-auto">
+                  <span className="text-xs text-primary font-medium">30 seconds</span>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold text-black mb-4">Upload Your Resume</h3>
+              <h3 className="text-2xl font-bold text-black mb-4">Clone the Repo</h3>
               <p className="text-gray-600 leading-relaxed">
-                Drop your PDF resume file. Any format works - our AI handles the rest and extracts all your information
-                seamlessly.
+                Get a clean, local copy of the codebase. No complex installers.
               </p>
             </div>
 
             {/* Step 2 */}
-            <div className="bg-white rounded-2xl p-8 shadow-sm border-4 border-gray-200 backdrop-blur transform  relative z-10 hover:rotate-0 transition-transform duration-300">
-              <div className="mb-6">
-                <span className="text-6xl font-bold text-black">2</span>
+            <div className="bg-white rounded-2xl p-8 shadow-sm border-5 border-gray-200 backdrop-blur transform  relative z-10">
+              <div className="flex items-start gap-4 mb-6">
+                <div className="mb-6">
+                  <span className="text-6xl font-bold text-black">2</span>
+                </div>
+                <div className="hidden sm:flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border-primary/20 ml-auto">
+                  <span className="text-xs text-primary font-medium">2 minutes</span>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold text-black mb-4">AI Does the Magic</h3>
+              <h3 className="text-2xl font-bold text-black mb-4">Add Your Keys</h3>
               <p className="text-gray-600 leading-relaxed">
-                Our advanced AI extracts your information and creates a beautiful, professional website in just 60
-                seconds with perfect formatting.
+                Open the .env.local.example file, rename it, and paste in your credentials.
               </p>
             </div>
 
             {/* Step 3 */}
-            <div className="bg-white lg:mt-8 rounded-2xl p-8 shadow-sm border-4 border-gray-200 backdrop-blur transform rotate-2 sm:rotate-3 relative z-10 hover:rotate-0 transition-transform duration-300">
-              <div className="mb-6">
-                <span className="text-6xl font-bold text-black">3</span>
+            <div className="bg-white lg:mt-8 rounded-2xl p-8 shadow-sm border-5 border-gray-200 backdrop-blur relative z-10">
+              <div className="flex items-start gap-4 mb-6">
+                <div className="mb-6">
+                  <span className="text-6xl font-bold text-black">3</span>
+                </div>
+                <div className="hidden sm:flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border-primary/20 ml-auto">
+                  <span className="text-xs text-primary font-medium">30 seconds</span>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold text-black mb-4">Share Your Website</h3>
+              <h3 className="text-2xl font-bold text-black mb-4">Run the Dev Server</h3>
               <p className="text-gray-600 leading-relaxed">
-                Get your custom DodoStarter.com/yourname URL and start impressing employers with your professional online
-                presence.
+                That's it. Your new app is running locally with a database, authentication, and payments ready to go.
               </p>
             </div>
           </div>
-
-          {/* Connection Line 1 to 2 
-          <div className="absolute top-0 sm:-rotate-45 left-1/4 w-1/6 h-32 hidden lg:block z-20">
-            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 247 69">
-              <path
-                d="M 10.716 56.236 C 10.716 56.236 38.876 9.087 88.573 3.406 C 138.271 -2.276 172.885 11.384 233.016 57.669 M 10.586 50.115 C 14.483 50.115 17.643 53.285 17.643 57.197 C 17.643 61.108 14.483 64.279 10.586 64.279 C 6.688 64.279 3.529 61.108 3.529 57.197 C 3.529 53.285 6.688 50.115 10.586 50.115 Z M 232.886 50.115 C 236.783 50.115 239.943 53.285 239.943 57.197 C 239.943 61.108 236.783 64.279 232.886 64.279 C 228.988 64.279 225.829 61.108 225.829 57.197 C 225.829 53.285 228.988 50.115 232.886 50.115 Z"
-                stroke="rgb(47, 49, 52)"
-                strokeWidth="2"
-                strokeLinejoin="round"
-                strokeLinecap="round"
-                fill="transparent"
-                opacity="0.7"
-                pathLength="1"
-                strokeDashoffset="0px"
-                strokeDasharray="1px 1px"
-              />
-            </svg>
-          </div>
-          */}
-
-          {/* Connection Line 2 to 3 
-          <div className="absolute top-20 right-1/5 w-1/4 h-40 sm:-rotate-60 hidden lg:block z-20">
-            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 106 179">
-              <path
-                d="M 95.993 11.704 C 43.708 8.765 57.558 98.411 77.749 93.631 C 97.94 88.852 48.295 23.589 19.858 39.508 C -8.579 55.425 10.736 95.485 15.297 103.641 C 19.859 111.796 46.874 150.721 92.134 170.369 M 92.468 163.464 C 96.205 163.464 99.234 166.488 99.234 170.219 C 99.234 173.949 96.205 176.974 92.468 176.974 C 88.731 176.974 85.702 173.949 85.702 170.219 C 85.702 166.488 88.731 163.464 92.468 163.464 Z M 95.851 4.728 C 99.588 4.728 102.617 7.752 102.617 11.483 C 102.617 15.214 99.588 18.238 95.851 18.238 C 92.114 18.238 89.085 15.214 89.085 11.483 C 89.085 7.752 92.114 4.728 95.851 4.728 Z"
-                stroke="rgb(37, 39, 42)"
-                strokeWidth="2"
-                strokeLinejoin="round"
-                strokeLinecap="round"
-                fill="transparent"
-                opacity="0.7"
-                pathLength="1"
-                strokeDashoffset="0px"
-                strokeDasharray="1px 1px"
-              />
-            </svg>
-          </div>
-          */}
         </div>
 
         <div className="text-center mt-20">
-          <p className="text-gray-500 mb-6 text-lg">Ready to transform your resume?</p>
-          
-                        <Link href="/login">
-                <Button 
-                  variant="link"
-                  className="text-md py-6 group relative overflow-hidden"
-                >
-                  Build My Website 
-                </Button>
-              </Link>
+          {/* Success Message - Compact Before→After Bar */}
+          <div className="max-w-3xl mx-auto mb-8">
+            {/* Compact success caption */}
+            <div className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-gray-50 backdrop-blur-sm px-3 py-1 mb-4">
+              <div className="w-5 h-5 rounded-full bg-green-100 border border-green-200 flex items-center justify-center">
+                <Hammer className="w-3.5 h-3.5" />
+              </div>
+              <span className="text-sm text-gray-700">Ready to build, not deconstruct.</span>
+            </div>
+
+            {/* Before → After comparison bar */}
+            <div className="relative w-full overflow-hidden rounded-xl border border-gray-200 bg-white backdrop-blur-sm">
+              <div className="grid grid-cols-2">
+                {/* Before */}
+                <div className="flex h-16 sm:h-20 items-center justify-center bg-red-50 text-red-600 border-r border-gray-200">
+                  <div className="text-center">
+                    <div className="text-lg sm:text-2xl font-bold">8–12 hrs</div>
+                    <div className="text-xs text-gray-500">Other boilerplates</div>
+                  </div>
+                </div>
+                {/* After */}
+                <div className="flex h-16 sm:h-20 items-center justify-center bg-green-50 text-green-600">
+                  <div className="text-center">
+                    <div className="text-lg sm:text-2xl font-bold">5 mins</div>
+                    <div className="text-xs text-gray-500">DodoStarter</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Center divider + arrow */}
+              <div className="absolute inset-y-0 left-1/2 w-px bg-gray-200" />
+              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-gray-200 bg-white px-2 py-0.5 text-xs text-gray-500">
+                →
+              </div>
+            </div>
+          </div>
+
+          <p className="text-gray-500 mb-6 text-lg">Ready to build, not deconstruct?</p>
+
+
         </div>
       </div>
     </section>

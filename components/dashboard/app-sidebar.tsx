@@ -145,7 +145,7 @@ export function AppSidebar({
                   <Command className="size-4" />
                 </div>
                 <div className="grid flex-1 text-left text-sm leading-tight">
-                  <span className="truncate font-medium">Unboilerplate</span>
+                  <span className="truncate font-medium">DodoStarter</span>
                   <span className="truncate text-xs">By Harvansh Chaudhary</span>
                 </div>
               </Link>

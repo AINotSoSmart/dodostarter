@@ -9,64 +9,64 @@ export default function FAQSection() {
 
   const faqs = [
     {
-      question: "How does DodoStarter.com convert my PDF resume into a website?",
+      question: "What's included in this Next.js boilerplate?",
       answer:
-        "Our AI technology automatically extracts all information from your PDF resume - including work experience, education, skills, and contact details. It then structures this data and creates a professional website with perfect formatting in just 60 seconds. No manual data entry required.",
+        "This boilerplate includes a complete SaaS foundation with Next.js 15, TypeScript, Supabase authentication, credit system, payment integration via DodoPayments, CSRF protection, rate limiting, SEO optimization, dynamic breadcrumbs, skeleton loading, and a responsive dashboard. Everything you need to launch your SaaS quickly.",
     },
     {
-      question: "What file formats do you support for resume uploads?",
+      question: "How does the credit system work?",
       answer:
-        "We support PDF files of any format. Our AI is trained to handle various resume layouts, fonts, and structures. Simply upload your existing PDF resume and our system will extract all the information automatically.",
+        "The credit system provides comprehensive user credit management with real-time updates, payment integration, and secure server-side validation. Users can purchase credits through DodoPayments, and you can easily deduct credits for API calls or feature usage with automatic UI updates.",
     },
     {
-      question: "How many themes are available and can I switch between them?",
+      question: "Is this boilerplate secure?",
       answer:
-        "We offer 9 professional themes including Default, Gray, Minimal, Zinc, Slate, Stone, Zen Garden, Orange, and Blue. Each theme is designed to be industry-appropriate and you can switch between them unlimited times with your Pro access.",
+        "Yes! Security is built-in with CSRF protection for all forms, optional rate limiting via Upstash Redis, server-side validation, secure authentication through Supabase, and configurable security settings. All sensitive operations are protected and validated.",
     },
     {
-      question: "What does the $12 one-time payment include?",
+      question: "How do I customize the SEO settings?",
       answer:
-        "Your $12 payment gives you one full year of access with unlimited PDF uploads, unlimited edits to your website, up to 50,000 visits per year, access to all 9 themes, and your custom DodoStarter.com/yourname domain. No monthly fees or hidden costs.",
+        "SEO is fully configurable through the centralized config/seo.ts file. You can customize titles, descriptions, keywords, social media cards, structured data, and more. The system uses Next.js 13+ Metadata API with automatic sitemap and robots.txt generation.",
     },
     {
-      question: "How do I get my custom DodoStarter.com domain?",
+      question: "Can I disable certain features I don't need?",
       answer:
-        "After creating your website, you'll automatically get a professional URL in the format DodoStarter.com/yourname. This gives you a clean, memorable link to share with employers instead of messy URLs. You can customize the 'yourname' part during setup.",
+        "Absolutely! Features like rate limiting, CSRF protection, and credit system are modular. You can disable rate limiting by removing Upstash environment variables, skip CSRF protection for specific forms, or remove the credit system entirely if not needed.",
     },
     {
-      question: "Is my resume website mobile-friendly?",
+      question: "How does the payment integration work?",
       answer:
-        "Absolutely! All our themes are fully responsive and look stunning on phones, tablets, and desktops. Your website will automatically adapt to any screen size, ensuring employers can view your resume perfectly on any device.",
+        "Payments are handled through DodoPayments with seamless credit purchasing. The system includes pre-built payment pages, success handling, webhook integration, and automatic credit allocation. Users can buy credits that are immediately available in their account.",
     },
     {
-      question: "Can I edit my website after it's created?",
+      question: "What's the skeleton loading system?",
       answer:
-        "Yes! With Pro access, you get unlimited edits. You can update your work experience, add new skills, change themes, upload new resume versions, or modify any content as many times as you need throughout your subscription year.",
+        "The skeleton loading system provides professional loading states for all pages. It includes three different skeleton layouts (PageSkeleton, SimplePageSkeleton, ListPageSkeleton) with smart page detection and context-based loading management for a smooth user experience.",
     },
     {
-      question: "How does this help me get more interviews?",
+      question: "How do I add CSRF protection to my forms?",
       answer:
-        "Professional websites stand out from PDF resumes in crowded applicant pools. Our users report 3x more interview callbacks because websites showcase personality, are easier to share, and demonstrate tech-savviness that employers value. You differentiate yourself from 250+ other applicants.",
+        "CSRF protection is simple: wrap your page with CSRFProvider, add CSRFInput to your forms, and validate the token in your server actions. The system provides reusable components and clear documentation for easy implementation.",
     },
     {
-      question: "Is my personal data secure and private?",
+      question: "Is the dashboard mobile-responsive?",
       answer:
-        "Yes, privacy is our priority. Your resume data is processed securely, we don't track your visitors, show ads, or share your information with third parties. Your professional website and personal data remain completely private and under your control.",
+        "Yes! The entire application is built with responsive design using Tailwind CSS and shadcn/ui components. The dashboard adapts perfectly to all screen sizes with collapsible sidebars, mobile-optimized navigation, and touch-friendly interfaces.",
     },
     {
-      question: "What happens if I'm not satisfied with my website?",
+      question: "How do I set up rate limiting?",
       answer:
-        "We offer a 30-day money-back guarantee. If you're not completely satisfied with your professional website for any reason, we'll provide a full refund within 30 days of purchase. We're confident you'll love the results.",
+        "Rate limiting is optional and easy to set up. Create a free Upstash Redis database, add the REST URL and token to your environment variables, and rate limiting will be automatically enabled. You can customize limits in the config/security.ts file.",
     },
     {
-      question: "How many visits can my website handle?",
+      question: "What database does this use?",
       answer:
-        "Your website can handle up to 50,000 visits per year, which is more than sufficient for most job seekers and professionals. You can share your website link on LinkedIn, with recruiters, in email signatures, or anywhere else without worrying about traffic limits.",
+        "The boilerplate uses Supabase as the database and authentication provider. Supabase offers PostgreSQL with real-time subscriptions, built-in authentication, row-level security, and a generous free tier. All database operations are type-safe with TypeScript.",
     },
     {
-      question: "Do I need any technical skills to use DodoStarter.com?",
+      question: "Can I customize the UI components?",
       answer:
-        "Not at all! The entire process is designed to be completely non-technical. Simply upload your PDF resume and our AI handles everything else. No coding, design skills, or technical knowledge required. If you can upload a file, you can create a professional website.",
+        "Yes! The UI is built with shadcn/ui components and Tailwind CSS, making customization straightforward. All components are in the components/ui directory and can be easily modified. The design system is consistent and follows modern UI patterns.",
     },
   ]
 
@@ -81,7 +81,7 @@ export default function FAQSection() {
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-black mb-6">Frequently asked questions</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Everything you need to know about transforming your resume into a professional website.
+            Everything you need to know about using this Next.js SaaS boilerplate to build your application.
           </p>
         </div>
 

@@ -7,7 +7,7 @@ export default function Footer() {
         {/* Main Footer Content */}
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="text-sm text-gray-600 font-medium mb-4 md:mb-0">
-            © {new Date().getFullYear()} DodoStarter.com. All rights reserved.
+            © {new Date().getFullYear()} DodoStarter by Harvansh Chaudhary. All rights reserved.
           </div>
           
           {/* Legal Links */}

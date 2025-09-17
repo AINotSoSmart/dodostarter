@@ -1,7 +1,7 @@
 {
-  "name": "DodoStarter.com - Resume to Website",
-  "short_name": "DodoStarter.com",
-  "description": "Create a professional resume website that stands out",
+  "name": "DodoStarter - A KickStarter boilerplate",
+  "short_name": "DodoStarter",
+  "description": "Launch Your Next Project This Afternoon",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

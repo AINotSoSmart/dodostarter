@@ -1,47 +1,42 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { Hammer } from "lucide-react"
 
 export function CTASection() {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="relative rounded-3xl bg-gradient-to-br from-black via-gray-900 to-black p-16 overflow-hidden">
-          {/* Pattern elements with low opacity */}
- 
-  <div
-    className="absolute inset-0 z-0"
-    style={{
-      backgroundImage: `
-        linear-gradient(to right,rgba(224, 228, 232, 0.44) 1px, transparent 1px),
-        linear-gradient(to bottom,rgba(226, 232, 240, 0.73) 1px, transparent 1px)
-      `,
-      backgroundSize: "20px 30px",
-      WebkitMaskImage:
-        "radial-gradient(ellipse 70% 60% at 50% 100%, #000 60%, transparent 100%)",
-      maskImage:
-        "radial-gradient(ellipse 70% 60% at 50% 100%, #000 60%, transparent 100%)",
-    }}
-  />
-     
-    
 
-          {/* Gradient overlay for depth */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+    {/* Diagonal Grid with Light */}
+    <div
+      className="absolute inset-0 z-0 pointer-events-none"
+      style={{
+        backgroundImage: `
+          repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.1) 0, rgba(0, 0, 0, 0.1) 1px, transparent 1px, transparent 20px),
+        repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0.1) 0, rgba(0, 0, 0, 0.1) 1px, transparent 1px, transparent 20px)
+        `,
+        backgroundSize: "40px 40px",
+      }}
+    />
+  
+ 
 
           {/* Content */}
           <div className="relative z-10 text-center">
-            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight">Ready to Stand Out?</h2>
-            <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
-              Stop sending boring PDFs. Start sharing a professional website that gets you noticed.
+            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight">Stop Building Infrastructure.
+             <br /> Start Building Products.</h2>
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+              Get the foundation you need to focus on what makes your product unique.
             </p>
 
-        
-                        <Link href="/login">
-                <Button className="text-md py-6 group relative overflow-hidden">
-                  Create My Website
-                </Button>
-              </Link>
+            <Link href="/login">
+              <Button 
+              variant="secondary"
+              className="text-md py-6 group relative overflow-hidden"
+              >
+                Start Tracking for Free
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

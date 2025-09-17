@@ -78,10 +78,10 @@ function LoginFormWithSearchParams() {
     <CSRFProvider>
       <div className="min-h-screen flex flex-col bg-gray-50">
         <Header />
-        <main className="flex-1 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <main className="flex-1 flex items-center justify-center py-24 px-4 sm:px-6 lg:px-8">
           <div className="w-full max-w-md space-y-8">
             <div className="space-y-2 text-center">
-              <h1 className="text-4xl font-semibold tracking-tight text-black">Welcome to DodoStarter.com</h1>
+              <h1 className="text-4xl font-semibold tracking-tight text-black">Welcome to DodoStarter</h1>
               <p className="text-lg text-gray-600">Sign in to create your professional resume</p>
             </div>
 
