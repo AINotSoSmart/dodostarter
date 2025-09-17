@@ -49,7 +49,7 @@ const data = {
    
     {
       title: "Documentation",
-      url: "/docs",
+      url: "https://github.com/AINotSoSmart/dodostarter/tree/main/docs",
       icon: BookOpen,
     },
     {
