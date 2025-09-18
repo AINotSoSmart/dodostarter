@@ -42,19 +42,19 @@ export function HeroSection() {
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full">
-            <Link href="/lifetime">
+            <Link href="/dashboard">
               <Button
                 className="text-md py-6 group relative overflow-hidden w-full sm:w-auto "
               >
-                Get DodoStarter - $25
+                Try it Now
               </Button>
             </Link>
-            <Link href="/blocks">
+            <Link href="https://github.com/AINotSoSmart/dodostarter">
               <Button
                 variant="secondary"
                 className="text-md py-6 group relative overflow-hidden w-full sm:w-auto"
               >
-                View Live Demo
+                View on Github
               </Button>
             </Link>
           </div>

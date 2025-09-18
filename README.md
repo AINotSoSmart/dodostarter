@@ -1,5 +1,7 @@
 # DodoStarter Boilerplate (AS-IS)
 
+![DodoStarter Hero](public/thumbnails/hero.png)
+
 > ⚠️ **This is not a finished product. It is an abandoned, 90% complete project.** ⚠️
 
 This project is provided **AS-IS**. I will not be providing any support, updates, or further development.
@@ -52,6 +54,12 @@ This boilerplate has a solid foundation with the following features already impl
     *   **Credit Management:** Add, deduct, and check user credits.
     *   **Real-time Updates:** UI updates automatically when credit balances change.
     *   **Payment Integration:** Seamlessly purchase credits through our integrated payment system with Dodopayments.
+
+![Pricing Plans](public/thumbnails/pricing-plans.png)
+
+*   **Demo Credit System:** See how credits are deducted in real-time when using tools.
+
+![Demo Credit Deduction](public/thumbnails/demo-credit-deduction.png)
 
 ### Security
 
@@ -106,6 +114,16 @@ To get this running locally, follow these steps:
     ```
 
     The app should now be running on [http://localhost:3000](http://localhost:3000).
+
+### Account Management
+
+The boilerplate includes comprehensive account management features:
+
+**Credit Balance Tracking:**
+![Account Credits](public/thumbnails/account-credits.png)
+
+**Transaction History:**
+![Account Transactions](public/thumbnails/account-transactions.png)
 
 4.  **Apply the database schema:**
 
